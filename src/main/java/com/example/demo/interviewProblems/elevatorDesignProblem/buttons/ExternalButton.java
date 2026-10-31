@@ -1,5 +1,7 @@
 package com.example.demo.interviewProblems.elevatorDesignProblem.buttons;
 
+import com.example.demo.interviewProblems.elevatorDesignProblem.enums.ElevatorDirection;
+
 public class ExternalButton
 {
     private final ExternalDispatcher externalDispatcher;

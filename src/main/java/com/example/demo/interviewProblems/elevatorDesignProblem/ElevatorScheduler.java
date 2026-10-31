@@ -3,6 +3,8 @@ package com.example.demo.interviewProblems.elevatorDesignProblem;
 import com.example.demo.interviewProblems.elevatorDesignProblem.elevatorSelectionStrategy.ElevatorSelectionStrategy;
 import com.example.demo.interviewProblems.elevatorDesignProblem.enums.ElevatorDirection;
 
+import java.util.List;
+
 public class ElevatorScheduler{
     private final List<ElevatorController> controllers;
     private ElevatorSelectionStrategy elevatorSelectionStrategy;
@@ -15,11 +17,11 @@ public class ElevatorScheduler{
 
     public void setStrategy(ElevatorSelectionStrategy strategy)
     {
-        this.strategy = strategy;
+        this.elevatorSelectionStrategy = strategy;
     }
 
     public ElevatorController assignElevator(int floor, ElevatorDirection direction)
     {
-        return strategy.selectElevator(controllers, floor, direction);
+        return elevatorSelectionStrategy.selectElevator(controllers, floor, direction);
     }
 }

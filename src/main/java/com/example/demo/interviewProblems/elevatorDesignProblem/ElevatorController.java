@@ -1,6 +1,8 @@
 package com.example.demo.interviewProblems.elevatorDesignProblem;
 
+import java.util.Collection;
 import java.util.Collections;
+import java.util.PriorityQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 
 import com.example.demo.interviewProblems.elevatorDesignProblem.enums.ElevatorDirection;
@@ -9,15 +11,15 @@ public class ElevatorController implements Runnable {
 
     ElevatorCar elevatorCar;
 
-    PriorityBlockingQueue<Integer> upMinPQ;
-    PriorityBlockingQueue<Integer> downMaxPQ;
+    PriorityQueue<Integer> upMinPQ;
+    PriorityQueue<Integer> downMaxPQ;
 
     private final Object monitor = new Object();
 
     public ElevatorController(ElevatorCar elevatorCar) {
         this.elevatorCar = elevatorCar;
-        upMinPQ = new PriorityBlockingQueue<>();
-        downMaxPQ = new PriorityBlockingQueue<>(Collections.reverseOrder());
+        upMinPQ = new PriorityQueue<>();
+        downMaxPQ = new PriorityQueue<>(Collections.reverseOrder());
     }
 
     public void submitRequest(int destinationFloor) {

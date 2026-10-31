@@ -1,5 +1,8 @@
 package com.example.demo.interviewProblems.elevatorDesignProblem;
-import com.exmaple.demo.interviewProblems.enums;
+
+
+import com.example.demo.interviewProblems.elevatorDesignProblem.enums.DoorState;
+
 public class Door{
     private DoorState doorState;
 
