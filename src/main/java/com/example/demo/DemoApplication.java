@@ -1,58 +1,91 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.SingletonDesignPattern.SingletonDesign;
+import com.example.demo.designPattern.decoratorDesignPattern.PizzaShop;
+import com.example.demo.designPattern.factoryDesignPattern.abstractFactoryMethod.Client;
+import com.example.demo.designPattern.factoryDesignPattern.factoryMethod.factory.FactoryMethodDemo;
+import com.example.demo.designPattern.observerDesignPattern.notification_system.NotificationClient;
+import com.example.demo.designPattern.observerDesignPattern.weather_notification.WeatherClient;
+import com.example.demo.designPattern.strategyDesignPattern.*;
+import com.example.demo.interviewProblems.elevatorDesignProblem.ElevatorClient;
+import com.example.demo.interviewProblems.parkingLotProblem.ParkingLotClient;
 
 @SpringBootApplication
 public class DemoApplication {
-
-  // @Value("${NAME:World}")
-  // String name;
-
-  // @RestController
-  // class HelloworldController {
-  //   @GetMapping("/")
-  //   String hello() {
-  //     return "Hello " + name + "!";
-  //   }
-  // }
+  
 
   public static void main(String[] args) {
-      //SpringApplication.run(DemoApplication.class, args); 
-
-      Runnable task = ()->{
-        SingletonDesign singletonDesign = SingletonDesign.getInstance();
-        System.out.println("Thread Name : " +
-          Thread.currentThread().getName() + " and using the object with hashcode : "+ singletonDesign.hashCode());
-      };
-
-      
-      Thread thread1 = new Thread(task, "Thread 1");
-      Thread thread2 = new Thread(task, "Thread 2");
-      Thread thread3 = new Thread(task, "Thread 3");
-      Thread thread4 = new Thread(task, "Thread 4");
-      Thread thread5 = new Thread(task, "Thread 5");
-      Thread thread6 = new Thread(task, "Thread 6");
-      Thread thread7 = new Thread(task, "Thread 7");
+    
+    //Strategy Design Pattern  
+    PaymentClient paymentClient = new PaymentClient();
+    paymentClient.makePayment();
 
 
+    //Observer Design Pattern
+    System.out.println("Started Observer Design Pattern ---");
+    System.out.println();
+    NotificationClient notificationClient = new NotificationClient();
+    notificationClient.start();
+    
+
+    System.out.println();
+    System.out.println();
+    System.out.println("Observer Design Pattern - weather station");
+    System.out.println();
+    WeatherClient weatherClient = new WeatherClient();
+    weatherClient.start();
 
 
-      thread1.start();
-      thread2.start();
-      thread3.start();
-      thread4.start();
-      thread5.start();
-      thread6.start();
-      thread7.start();
+    System.out.println();
+    System.out.println();
+
+    //Decorator Design Pattern
+    PizzaShop pizzaShop = new PizzaShop();
+    pizzaShop.start();
 
 
-      
+
+    //Factory Method - Design pattern;
+    System.out.println("Started Factory Method Design Pattern ---");
+    FactoryMethodDemo factoryMethodDemo = new FactoryMethodDemo();
+    factoryMethodDemo.start();
+
+    System.out.println();
+    System.out.println("-----------------");
+    System.out.println();
+
+    //Abstract factory Method - Design Pattern
+    System.out.println("Started Abstract Factory Method Design Pattern ---");
+    Client client = new Client();
+    client.start();
+
+
+
+    System.out.println("-----------------");
+    System.out.println();
+    System.out.println("System Design Interview Problem - ParkingLot Problem");
+
+    ParkingLotClient parkingLotClient = new ParkingLotClient();
+    parkingLotClient.startParkingLotClient();
+
+
+    System.out.println();
+    System.out.println();
+    System.out.println("-----------------");
+    System.out.println();
+
+
+
+    System.out.println();
+    System.out.println();
+    System.out.println();
+
+    System.out.println("-----------------");
+    System.out.println("Elevator System Started ---");
+    ElevatorClient elevator = new ElevatorClient();
+    elevator.startElevator();
+
 
 
   }
