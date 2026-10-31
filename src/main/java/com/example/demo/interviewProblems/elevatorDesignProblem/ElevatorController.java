@@ -28,7 +28,7 @@ public class ElevatorController implements Runnable {
 
     public void enqueueRequest(int destinationFloor)
     {
-        System.out.println("Request details -> destination flooe : "+ destinationFloor
+        System.out.println("Request details -> destination floor : "+ destinationFloor
             +"accepted by elevetor : " + elevatorCar.elevatorId
         );
 
