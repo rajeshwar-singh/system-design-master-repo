@@ -37,7 +37,7 @@ public class ElevatorClient
 
             // 6. Start both the elevator controllers threads
             new Thread(controller1, "Elevator-1").start();
-            new Thread(controller2, "Elevator-2").start();
+            new Thread(controller2, "Elevator-2").start();L
 
 
 
