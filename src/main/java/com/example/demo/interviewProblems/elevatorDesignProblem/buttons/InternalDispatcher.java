@@ -1,5 +1,7 @@
 package com.example.demo.interviewProblems.elevatorDesignProblem.buttons;
 
+import com.example.demo.interviewProblems.elevatorDesignProblem.ElevatorController;
+
 public class InternalDispatcher{
     private static InternalDispatcher INSTANCE = new InternalDispatcher();
     private InternalDispatcher() {}

@@ -1,4 +1,9 @@
 package com.example.demo.interviewProblems.elevatorDesignProblem;
+
+import com.example.demo.interviewProblems.elevatorDesignProblem.buttons.ExternalButton;
+import com.example.demo.interviewProblems.elevatorDesignProblem.buttons.ExternalDispatcher;
+import com.example.demo.interviewProblems.elevatorDesignProblem.enums.ElevatorDirection;
+
 public class Floor{
     int floorNumber;
     ExternalButton upButton;

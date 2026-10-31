@@ -1,3 +1,7 @@
+package com.example.demo.interviewProblems.elevatorDesignProblem.buttons;
+import com.example.demo.interviewProblems.elevatorDesignProblem.ElevatorController;
+import com.example.demo.interviewProblems.elevatorDesignProblem.buttons.InternalDispatcher;
+
 public class InternalButton {
 
     private final ElevatorController controller;

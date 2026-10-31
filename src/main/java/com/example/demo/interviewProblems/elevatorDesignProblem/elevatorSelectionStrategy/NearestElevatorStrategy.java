@@ -2,8 +2,8 @@ package com.example.demo.interviewProblems.elevatorDesignProblem.elevatorSelecti
 
 import com.example.demo.interviewProblems.elevatorDesignProblem.ElevatorController;
 import com.example.demo.interviewProblems.elevatorDesignProblem.enums.ElevatorDirection;
-
-public class NearestElevatorSelectionStrategy implements ElevatorSelectionStrategy
+import java.util.*;
+public class NearestElevatorStrategy implements ElevatorSelectionStrategy
 {
     @Override
     public ElevatorController selectElevator(List<ElevatorController> elevatorControllers,
@@ -36,7 +36,7 @@ public class NearestElevatorSelectionStrategy implements ElevatorSelectionStrate
         // fallback: if not able to choose, pick the idle one
         if(best == null)
         {
-            for(ElevatorController controller : controllers)
+            for(ElevatorController controller : elevatorControllers)
             {
                 if(controller.getElevatorCar().getElevatorDirection() == ElevatorDirection.IDLE)
                 {
@@ -46,7 +46,7 @@ public class NearestElevatorSelectionStrategy implements ElevatorSelectionStrate
             }
             //reached here means, no list is going in same direction and no lift is IDLE too, then pick any lift
             if(best == null) {
-                best = controllers.get(0);
+                best = elevatorControllers.get(0);
             }
         }
         return best;
