@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.interviewProblems.carRental.CarRentalClient;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.designPattern.decoratorDesignPattern.PizzaShop;
@@ -17,7 +18,7 @@ public class DemoApplication {
 
   public static void main(String[] args) {
     
-    //Strategy Design Pattern  
+    /*//Strategy Design Pattern
     PaymentClient paymentClient = new PaymentClient();
     paymentClient.makePayment();
 
@@ -27,7 +28,7 @@ public class DemoApplication {
     System.out.println();
     NotificationClient notificationClient = new NotificationClient();
     notificationClient.start();
-    
+
 
     System.out.println();
     System.out.println();
@@ -85,6 +86,34 @@ public class DemoApplication {
     System.out.println("Elevator System Started ---");
     ElevatorClient elevator = new ElevatorClient();
     elevator.startElevator();
+      System.out.println();
+      System.out.println();
+      System.out.println("Elevator System Completed");
+
+      System.out.println("-----------------");*/
+
+      System.out.println();
+      System.out.println();
+      System.out.println("-----------------");
+      System.out.println("Car Rental System Started");
+
+      CarRentalClient carRentalClient = new CarRentalClient();
+      try
+      {
+          carRentalClient.startCarRentalSystem();
+      }
+      catch (Exception e)
+      {
+          e.printStackTrace();
+      }
+
+
+      System.out.println();
+      System.out.println();
+      System.out.println("Car rental System ended");
+
+      System.out.println("-----------------");
+
 
 
 
