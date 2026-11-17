@@ -1,6 +1,6 @@
 package com.example.demo.designPattern.chainOfResponsibilityDesignPattern;
 
-public class InfoLogProcessor extends LogProcessor {
+public class InfoLogProcessor extends LoggerProcessor {
 
    public InfoLogProcessor(int level)
    {
