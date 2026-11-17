@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:/Rajeshwar/system-design-master-repo",
+        "D:/Rajeshwar/system-design-master-repo/src/main/java/com/example/demo/designPattern",
+        "D:/Rajeshwar/system-design-master-repo/src/main/java/com/example/demo/interviewProblems"
+
+      ]
+    }
+  }
+}
