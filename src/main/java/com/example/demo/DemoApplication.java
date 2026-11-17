@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.designPattern.chainOfResponsibilityDesignPattern.LoggerClient;
 import com.example.demo.interviewProblems.carRental.CarRentalClient;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -92,7 +93,7 @@ public class DemoApplication {
 
       System.out.println("-----------------");*/
 
-      System.out.println();
+     /* System.out.println();
       System.out.println();
       System.out.println("-----------------");
       System.out.println("Car Rental System Started");
@@ -114,7 +115,12 @@ public class DemoApplication {
 
       System.out.println("-----------------");
 
+*/
 
+
+      // chain of responsibility - system design
+      LoggerClient loggerClient = new LoggerClient();
+      loggerClient.startLogger();
 
 
   }

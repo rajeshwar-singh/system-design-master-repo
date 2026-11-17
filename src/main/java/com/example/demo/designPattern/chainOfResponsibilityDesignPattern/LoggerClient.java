@@ -30,10 +30,10 @@ public class LoggerClient
         LoggerProcessor fatalLogger = new FatalLogProcessor(LoggerProcessor.FATAL);
 
 
-        debugLogger.nextLogger(infoLogger);
-        infoLogger.nextLogger(errorLogger);
-        errorLogger.nextLogger(fatalLogger);
-        fatalLogger.nextLogger(null);
+        debugLogger.setNextLogger(infoLogger);
+        infoLogger.setNextLogger(errorLogger);
+        errorLogger.setNextLogger(fatalLogger);
+        fatalLogger.setNextLogger(null);
 
         return debugLogger;
     }
