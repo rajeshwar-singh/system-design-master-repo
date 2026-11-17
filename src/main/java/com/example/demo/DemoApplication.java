@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.designPattern.chainOfResponsibilityDesignPattern.LoggerClient;
 import com.example.demo.interviewProblems.carRental.CarRentalClient;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.designPattern.decoratorDesignPattern.PizzaShop;
@@ -12,13 +13,16 @@ import com.example.demo.designPattern.observerDesignPattern.weather_notification
 import com.example.demo.designPattern.strategyDesignPattern.*;
 import com.example.demo.interviewProblems.elevatorDesignProblem.ElevatorClient;
 import com.example.demo.interviewProblems.parkingLotProblem.ParkingLotClient;
+import org.springframework.resilience.annotation.EnableResilientMethods;
 
+@EnableResilientMethods
 @SpringBootApplication
 public class DemoApplication {
   
 
   public static void main(String[] args) {
-    
+
+      SpringApplication.run(DemoApplication.class, args);
     /*//Strategy Design Pattern
     PaymentClient paymentClient = new PaymentClient();
     paymentClient.makePayment();
@@ -121,7 +125,6 @@ public class DemoApplication {
       // chain of responsibility - system design
       LoggerClient loggerClient = new LoggerClient();
       loggerClient.startLogger();
-
 
   }
 
