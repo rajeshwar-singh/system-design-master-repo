@@ -75,24 +75,24 @@ This helps me understand:
 - Operational insights into system behavior.
 - The importance of observability in distributed systems.
 
+
+
 ### Before vs. After Implementation — Impact Evaluation
 
-The following matrix highlights the expected improvements from introducing MCP-based AI assistance and monitoring into my system design practice.
+| Evaluation Area | Before Implementation | After Implementation | Outcome |
+|---|---|---|---|
+| AI Code Assistance | No integrated AI workflow in IntelliJ Community | AI assistance through MCP integration | AI-assisted development without paid IDE AI features |
+| Code Context Sharing | Manually copy/paste files into AI tools | AI reads project files through MCP Filesystem | Reduced manual context-sharing effort |
+| Code Review | Primarily self-review | AI-assisted code analysis and review | Faster identification of potential issues |
+| Design Validation | Validate class design manually | AI reviews classes, abstractions, SOLID principles, and design patterns | Better design feedback |
+| Debugging | Manually trace code and investigate errors | AI analyzes relevant files and assists in troubleshooting | Reduced debugging effort |
+| Project Understanding | Open and inspect files individually | AI can analyze multiple related files | Improved understanding of project structure |
+| Learning & Feedback | Search concepts and solutions separately | Context-aware feedback on actual implementations | Faster learning and iteration |
+| Refactoring | Identify improvements manually | AI suggests refactoring and alternative approaches | Improved readability and maintainability |
+| Monitoring | Limited visibility into system metrics | Monitoring and observability configurations implemented | Improved system visibility |
+| Development Workflow | Repetitive context sharing and tool switching | IDE + MCP + AI-assisted review workflow | More streamlined development process |
 
-> Note: Percentage improvements are estimated potential impacts, not benchmarked measurements. They are included to illustrate the expected benefits of the workflow.
 
-| Evaluation Metric | Before Implementation | After Implementation | Expected Impact |
-|---|---|---|
-| Code Context Sharing | Manually copy/paste source files into AI tools | AI can access permitted project files through MCP | 40–60% less context-sharing overhead |
-| Code Review | Primarily manual self-review | AI-assisted review of classes, logic, and implementation | 30–50% faster initial review |
-| Design Validation | Manually evaluate design against requirements | AI assists in validating design decisions and identifying gaps | Faster identification of design flaws |
-| Debugging | Manually trace logic and investigate errors | AI can analyze relevant files and assist with root-cause investigation | 20–40% faster debugging investigation |
-| Learning & Feedback | Search concepts and solutions independently | Context-aware feedback based on actual implementation | Faster learning and iteration |
-| Project Analysis | Inspect files and classes individually | AI can explore related files and project structure | Reduced manual analysis |
-| Development Workflow | Switch between IDE, files, and external AI tools | IDE-focused workflow with contextual AI assistance | Reduced workflow friction |
-| Code Quality | Self-review with limited feedback | AI-assisted feedback on SOLID, patterns, readability, and maintainability | Improved design quality |
-| Monitoring & Observability | Limited exposure to monitoring configurations | Monitoring and observability experimentation | Better understanding of system health and metrics |
-| Iteration & Refactoring | Implement and move to the next problem | Review, refine, refactor, and iterate | More structured development process |
 
 ### Key Outcomes
 
